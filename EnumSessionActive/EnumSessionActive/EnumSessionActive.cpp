@@ -4,6 +4,9 @@
 #include <Wtsapi32.h>
 #include <stdio.h>
 
+// Note: Use WTSGetActiveConsoleSessionId() instead can cause not correct result
+//  eg: When using Remote Desktop
+
 char* GetSessionStatusStr(WTS_CONNECTSTATE_CLASS sessionInfo);
 
 int main(int argc, char* argv[])
